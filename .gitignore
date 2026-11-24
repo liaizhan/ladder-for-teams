@@ -1,0 +1,25 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+
+# Local data
+*.db
+*.db-journal
+
+# Secrets
+.env
+.env.*
+!.env.example
+
+# Node (local Synapse CLI)
+node_modules/
+
+# Synapse session logs (contain local machine paths)
+.synapse/discover/
+
+# Private recording notes
+docs/demo-video-script.md
+
+# OS
+.DS_Store

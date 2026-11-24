@@ -1,0 +1,100 @@
+{
+  "version": 1,
+  "repo_hash": "0610e2e752b85c08b314582cdc09834cc195ae8f6032478056aa7d44882e4c62",
+  "language": "python",
+  "framework": "fastapi",
+  "package_import_root": "ladder_teams.api",
+  "captured_functions": false,
+  "files": {
+    "ladder_teams/api.py": {
+      "sha": "03f0a86deec11222b1fc96c72d4889ab1469ee53d248f90be9bcfa720bb7c59f",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/questions",
+          "handler_module": "ladder_teams.api",
+          "handler_qualname": "get_questions",
+          "description": "The four questions of the Ladder method: goal, where you are now, blocks, fears.",
+          "payload_example": null,
+          "headers_hint": [],
+          "suggested_tool_name": "get_questions",
+          "file_path": "ladder_teams/api.py",
+          "start_line": 41,
+          "end_line": 43
+        },
+        {
+          "method": "POST",
+          "path": "/ladders",
+          "handler_module": "ladder_teams.api",
+          "handler_qualname": "build_member_ladder",
+          "description": "Build an employee's ladder privately and return the reading with one step for this week.",
+          "payload_example": {
+            "team": "",
+            "member": "",
+            "goal": "",
+            "me": "",
+            "blocks": [],
+            "fears": null
+          },
+          "headers_hint": [],
+          "suggested_tool_name": "build_member_ladder",
+          "file_path": "ladder_teams/api.py",
+          "start_line": 47,
+          "end_line": 49
+        },
+        {
+          "method": "GET",
+          "path": "/teams/{team}/members/{member}/step",
+          "handler_module": "ladder_teams.api",
+          "handler_qualname": "weekly_step_for",
+          "description": "This week's step for one employee, aimed at the block nearest to them.",
+          "payload_example": null,
+          "headers_hint": [],
+          "suggested_tool_name": "weekly_step_for",
+          "file_path": "ladder_teams/api.py",
+          "start_line": 53,
+          "end_line": 55
+        },
+        {
+          "method": "POST",
+          "path": "/checkins",
+          "handler_module": "ladder_teams.api",
+          "handler_qualname": "check_in",
+          "description": "Record whether the employee did this week's step.",
+          "payload_example": {
+            "team": "",
+            "member": "",
+            "done": false,
+            "week": null
+          },
+          "headers_hint": [],
+          "suggested_tool_name": "check_in",
+          "file_path": "ladder_teams/api.py",
+          "start_line": 59,
+          "end_line": 61
+        },
+        {
+          "method": "GET",
+          "path": "/teams/{team}/report",
+          "handler_module": "ladder_teams.api",
+          "handler_qualname": "team_report",
+          "description": "Anonymous team report: shared kinds of blocks and weekly progress. Never shows anyone's words.",
+          "payload_example": null,
+          "headers_hint": [],
+          "suggested_tool_name": "team_report",
+          "file_path": "ladder_teams/api.py",
+          "start_line": 65,
+          "end_line": 67
+        }
+      ],
+      "functions": []
+    },
+    "ladder_teams/store.py": {
+      "sha": "8e07dc8d2d3990ad1ce70802ce1b88320d55db91292996a276f02d5337e0fbc4",
+      "endpoints": [],
+      "functions": []
+    }
+  },
+  "lines_scanned": 136,
+  "updated_at": 1794671805182
+}

@@ -1,0 +1,14 @@
+{
+  "name": "ladder-for-teams",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Local install of Synapse CLI used to generate the Ladder for Teams MCP server.",
+  "author": "Aizhan Li",
+  "license": "UNLICENSED",
+  "scripts": {
+    "synapse:build": "SYNAPSE_TELEMETRY=0 synapse build --local --provider ollama --auto --all-endpoints --base-url http://127.0.0.1:8000 --server-name ladder-for-teams"
+  },
+  "dependencies": {
+    "@2ndbrainlabs-ai/synapse-cli": "^0.1.9"
+  }
+}
